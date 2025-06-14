@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vini Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Vini - Full Stack Developer Portfolio showcasing web projects using Django, React, HTML, and more.">
+  <link href="assets/img/vini1.png" rel="icon">
+  <link href="assets/img/vini1.png" rel="apple-touch-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+</head>
+
+<body class="section-visible">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar bg-dark shadow-sm" style="height: 80px;">
+    <div class="container">
+      <a class="navbar-brand text-info fw-bold fs-3" href="#">Vini</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navGlass">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navGlass">
+        <ul class="navbar-nav align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link text-white" href="#home"><i class="bi bi-house-door-fill"></i>
+              Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#about"><i class="bi bi-person-circle"></i>
+              About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#education"><i class="bi bi-mortarboard-fill"></i>
+              Education</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#skills"><i class="bi bi-tools"></i> Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#projects"><i class="bi bi-layout-text-window"></i>
+              Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact"><i class="bi bi-envelope-fill"></i>
+              Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- home section -->
+<section id="home" class="hero d-flex align-items-center text-light click-section"
+  style="min-height: 100vh; background: url(assets/img/background.avif) center center / cover no-repeat fixed;">
+
+    <div class="container mt-2">
+      <div class="row justify-content-between align-items-center text-center text-lg-start g-5">
+        <!-- 📸 Image Card -->
+        <div class="col-lg-4">
+          <div class="card-style text-center">
+            <img src="assets/img/psave.png" alt="Vini Photo">
+          </div>
+        </div>
+<!-- psave.png -->
+        <!-- 💬 Text Content -->
+        <div class="col-lg-7">
+          <div class="card-style text-white">
+            <h1 class="display-3 fw-bold mb-3 text-primary">Vini</h1>
+            <p class="lead fs-4 mb-1">I'm <span id="typed-role" class="fw-bold gradient-text">a Web Developer</span></p>
+            <p class="lead mb-4">Passionate about building clean, user-friendly web experiences.</p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+              <a href="assets/vini.pdf" class="btn btn-glass btn-lg px-4">
+                <i class="bi bi-download me-2"></i>Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About -->
+  <section id="about" class="mt-2 reveal-section  click-section">
+    <div class="container glass-card py-5" style="min-height: 100vh;">
+      <h2 class="text-center gradient-text mt-5">About</h2>
+      <p class="text-center">Hi, I'm Vini, Computer Science graduate from Infant Jesus College of Arts and Sciences for
+        Women, Mulagumoodu.</p>
+      <div class="row align-items-center mt-4">
+        <div class="col-lg-4 text-center">
+          <img src="assets/img/profile.png" class="img-fluid rounded-circle" alt="Profile">
+        </div>
+        <div class="col-lg-8">
+          <h3 class="text-glow">Full Stack Web Developer</h3>
+          <p class="fst-italic">I can build a complete website from frontend to backend.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled about-list">
+                <li><strong>Birthday:</strong> 13 Jan 2005</li>
+                <li><strong>Phone:</strong> +91 9360564254</li>
+                <li><strong>City:</strong> Mulagumoodu, Kanniyakumari</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled about-list">
+                <li><strong>Degree:</strong> B.Sc. Computer Science</li>
+                <li><strong>Email:</strong> vinivini1688@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+          <p class="mt-3">Clovion where I worked on real-world applications using Django and Python.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Education -->
+  <section id="education" class="py-5 bg-light  click-section" style="max-height: 200vh;">
+    <div class="container">
+      <h2 class="text-center text-primary mt-5">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item mb-4 p-4 bg-white rounded shadow-sm border-start border-4 border-info">
+          <h5 class="fw-bold">B.Sc. Computer Science</h5>
+          <p><strong>Institution:</strong> Infant Jesus College of Arts and Sciences for Women, Mulagumoodu</p>
+          <p><strong>Year:</strong> 2022 – 2025</p>
+          <p class="text-muted">Learned core subjects like Data Structures, DBMS, Web Development, and Image Processing.
+            Built projects with Django and React.</p>
+        </div>
+        <!-- <div class="timeline-item mb-4 p-4 bg-white rounded shadow-sm border-start border-4 border-info">
+          <h5 class="fw-bold">HSC - Computer Science</h5>
+          <p><strong>School:</strong> St. Joseph's HSS, Mulagumoodu</p>
+          <p><strong>Year:</strong> 2020 – 2022</p>
+          <p class="text-muted">Studied programming and participated in tech exhibitions.</p>
+        </div>
+        <div class="timeline-item mb-4 p-4 bg-white rounded shadow-sm border-start border-4 border-info">
+          <h5 class="fw-bold">SSLC</h5>
+          <p><strong>School:</strong> St. Joseph's High School, Pilankalai</p>
+          <p><strong>Year:</strong> 2019 – 2020</p>
+          <p class="text-muted">Strong foundation in math and science subjects.</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-5  click-section">
+    <div class="container">
+      <h2 class="text-center text-primary mt-5">Skills</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Repeat for each skill -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-html5-plain colored"></i>
+            <h5>HTML</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-css3-plain colored"></i>
+            <h5>CSS</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-javascript-plain colored"></i>
+            <h5>JavaScript</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-bootstrap-plain colored"></i>
+            <h5>Bootstrap</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-python-plain colored"></i>
+            <h5>Python</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-django-plain colored"></i>
+            <h5>Django</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-sqlite-plain colored"></i>
+            <h5>SQLite</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card"><i class="devicon-react-original colored"></i>
+            <h5>React</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-5 mb-5 bg-light click-section">
+    <div class="container">
+      <h2 class="text-center text-primary mt-5">Projects</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="p-4 rounded-3 shadow-sm bg-white border-start border-4 border-info flex-fill">
+            <h5 class="fw-bold">ToDo App</h5>
+            <p>Task manager built with Django and SQLite.</p>
+            <!-- <a href="#" class="btn btn-outline-primary btn-sm mt-2"><i class="bi bi-github"></i> View Code</a> -->
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="p-4 rounded-3 shadow-sm bg-white border-start border-4 border-info flex-fill">
+            <h5 class="fw-bold">Portfolio Website</h5>
+            <p>Responsive personal portfolio built with HTML and Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5  click-section" style="background: linear-gradient(to right, #e0f7ff, #f0f4ff);">
+    <div class="container">
+      <h2 class="text-center text-primary mt-5">Contact Me</h2>
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="mb-4"><i class="bi bi-info-circle-fill text-info me-2"></i>Contact Details</h5>
+            <p><i class="bi bi-geo-alt-fill text-primary me-2"></i><strong>Location:</strong> Mulagumoodu, Kanniyakumari
+            </p>
+            <p><i class="bi bi-telephone-fill text-primary me-2"></i><strong>Phone:</strong> +91 9360564254</p>
+            <p><i class="bi bi-envelope-fill text-primary me-2"></i><strong>Email:</strong> vinivini1688@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <form action="https://formsubmit.co/vinivini1688@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="mb-3"><label class="form-label">Your Name</label><input type="text" name="name"
+                  class="form-control border-info" placeholder="Enter your name" required></div>
+              <div class="mb-3"><label class="form-label">Your Email</label><input type="email" name="email"
+                  class="form-control border-info" placeholder="Enter your email" required></div>
+              <div class="mb-3"><label class="form-label">Subject</label><input type="text" name="subject"
+                  class="form-control border-info" placeholder="Subject" required></div>
+              <div class="mb-3"><label class="form-label">Message</label><textarea name="message" rows="5"
+                  class="form-control border-info" placeholder="Write your message..." required></textarea></div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-info text-white px-5 py-2 rounded-pill shadow shine-btn">Send
+                  Message</button>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Your main JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

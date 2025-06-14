@@ -1,0 +1,434 @@
+/* ------------------------------- */
+/*        Root Variables          */
+/* ------------------------------- */
+:root {
+  --primary-color: #0d6efd;
+  --info-color: #17a2b8;
+  --bg-light: #f8f9fa;
+  --text-dark: #212529;
+  --gradient-text: linear-gradient(90deg, #0d6efd, #6610f2);
+}
+
+/* ------------------------------- */
+/*          Base Styles           */
+/* ------------------------------- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  background-color: #fff;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  transition: background-color 0.4s ease;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ------------------------------- */
+/*   Stylish Glassmorphism Button */
+/* ------------------------------- */
+.btn-glass {
+  background: rgba(13, 110, 253, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(13, 110, 253, 0.3);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+/* Glowing border animation effect */
+.btn-glass::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, #0d6efd, #6610f2, #0dcaf0, #0d6efd);
+  animation: glowRotate 4s linear infinite;
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.6;
+}
+
+@keyframes glowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a:hover {
+  color: var(--info-color);
+  text-shadow: 1px 1px 2px rgba(23, 162, 184, 0.6);
+}
+
+/* ------------------------------- */
+/*           Navbar Styles        */
+/* ------------------------------- */
+.custom-navbar {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--info-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--info-color);
+  transform: scale(1.05);
+}
+
+/* ------------------------------- */
+/*           Hero Section         */
+/* ------------------------------- */
+.hero {
+  position: relative;
+  background: url('assets/img/background.jpg') center center / cover no-repeat fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero {
+  background: url('assets/img/background.jpg') repeat;
+  background-size: cover;
+  animation: bgMove 20s linear infinite;
+}
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  /* font-weight: bold; */
+  /* animation: glow 2s infinite alternate; */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #17a2b8;
+  }
+  to {
+    text-shadow: 0 0 15px #6610f2;
+  }
+}
+
+/* ------------------------------- */
+/*         Card & About Style     */
+/* ------------------------------- */
+.card-style {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  /* backdrop-filter: blur(12px); */
+  /* -webkit-backdrop-filter: blur(12px); */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-style:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+.card-style img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px;
+  border: 4px solid var(--info-color);
+  transition: 0.3s;
+}
+
+.card-style img:hover {
+  transform: scale(1.05);
+}
+
+/* About Section Icons and List */
+#about ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#about li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+#about li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--info-color);
+}
+
+/* ------------------------------- */
+/*         Timeline & Skills      */
+/* ------------------------------- */
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--info-color);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(23, 162, 184, 0.6);
+}
+
+.skill-card {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* ------------------------------- */
+/*         Reveal Animations      */
+/* ------------------------------- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section-visible.glass-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-glow {
+  color: #fff;
+  text-shadow: 0 0 3px rgba(13, 110, 253, 0.7), 0 0 20px rgba(13, 110, 253, 0.5);
+}
+
+.about-list li {
+  transition: all 0.3s ease;
+  padding-left: 0.2rem;
+}
+
+.about-list li:hover {
+  color: var(--info-color);
+  transform: translateX(5px);
+}
+
+/* ------------------------------- */
+/*         Project Buttons        */
+/* ------------------------------- */
+#projects .btn {
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+#projects .btn:hover {
+  background-color: var(--info-color);
+  color: white;
+  border-color: var(--info-color);
+  transform: scale(1.05);
+}
+
+/* ------------------------------- */
+/*           Contact Form         */
+/* ------------------------------- */
+/* Smooth border, shadow, and transition */
+.contact-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 136, 204, 0.2);
+}
+
+/* Input box glow effect */
+.stylish-input:focus {
+  border-color: #0dcaf0;
+  box-shadow: 0 0 10px rgba(13, 202, 240, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button glow hover */
+.shine-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shine-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+.shine-btn:hover::after {
+  left: 120%;
+}
+
+/* Stylish glowing button effect */
+.shine-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(13, 202, 240, 0.4);
+  border: none;
+}
+
+/* Shine animation */
+.shine-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+/* Hover effect */
+.shine-btn:hover::after {
+  left: 120%;
+}
+
+.shine-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(13, 202, 240, 0.5);
+}
+
+/* ------------------------------- */
+/*        Section Headings        */
+/* ------------------------------- */
+section h2 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------------- */
+/*         Responsive Media       */
+/* ------------------------------- */
+@media (max-width: 768px) {
+  .card-style img {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* ------------------------------- */
+/*           Dark Mode            */
+/* ------------------------------- */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .custom-navbar {
+  background: rgba(20, 20, 20, 0.9);
+  border-bottom: 2px solid #0dcaf0;
+}
+
+.dark-mode .card-style,
+.dark-mode .skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.05);
+}
+
+/* ------------------------------- */
+/*     Focused Section Effect     */
+/* ------------------------------- */
+.click-section {
+  transition: 0.4s ease;
+}
+
+body.section-focused .click-section {
+  filter: blur(4px);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+body.section-focused .click-section.active {
+  filter: none;
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+}
